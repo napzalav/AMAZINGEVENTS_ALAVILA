@@ -1,5 +1,39 @@
+https://docs.google.com/presentation/d/e/2PACX-1vSXu5on51QpbKW8VMsgi3wJli7hVuCz7t5hLD43NZGkXjhkNqOnsTNkM6z1vNU97e-w44GUQ5iabPsy/pub?start=false&loop=false&delayms=3000&slide=id.p10
+
+
+****************************
+*********MAIL ESP***********
+****************************
+
+Bienvenido a Web Code Este es un momento emocionante para subir a bordo, ya que tenemos algunos nuevos proyectos en camino, como Amazing Events.
+
+La idea es desarrollar la aplicación desde cero, pero primero necesitaré que nos envíes algunos ejercicios en javascript para ver tus habilidades en el lenguaje.
+
+vienes a nosotros como un experto en html/css, asi que se que te quiero en este proyecto. Todavía estoy trabajando con Amazing Events para aclarar lo que les gustaría que diéramos por ellos. Me reuniré con ellos esta semana, así que pronto tendré más detalles.
+
+Mientras trabajo con AE me gustaría que me enviaras un repositorio de GitHub con un modelo del sitio basado en el wireframe que te enviamos. Siéntete libre de elegir tu paleta de colores y hacer cualquier cambio de diseño que actualice la aplicación sin perder contenido.
+
+
+****************************
+*********MAIL ENG***********
+****************************
+
+Welcome to Web Code! This is an exciting time to get on board, as we have some new projects coming in, such as Amazing Events.
+
+the idea is to develop the app from scratch, but first i'll need you to send us some exercises on javascript to see your abilities in the language.
+
+you come to us as an html/css expert, so i know i want you on this project. I'm still working with Amazing Events to clarify just what they'd like us to di for them. I'm meeting with them this week, so i'll have more detail soon.
+
+While i work  with AE i'd like you to send me a GitHub repository with a model of the site based on the wireframe we sent you. Feel free to choose your color palette and make any design changes that will upgrade the app without losing content.
+
+
+
+
+
+****************************
 ****************************
 *********SPANISH***********
+****************************
 ****************************
 
 Eventos asombrosos paso a paso
@@ -46,9 +80,10 @@ Para tu primer sprint necesitarás tus conocimientos en HTML y CSS, además de B
 
 
 
-
+****************************
 ****************************
 *********ENGLISH***********
+****************************
 ****************************
 
 Step by step Amazing Events
