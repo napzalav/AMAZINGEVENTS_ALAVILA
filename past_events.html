@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- LOGO -->
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/amazing_brand.png" alt="Amazing Events" width="100" />
+                </a>
+                <!-- <a class="navbar-brand"
+                    href="#">Se puede poner un nombre alternativo en la barra de navegacion
+                </a> -->
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./home.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./upcoming_events.html">UPCOMING EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./past_events.html">PAST EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./stats.html">STATS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/optional_banner_3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>PAST EVENTS</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iure ipsa dolorem dolor
+                            exercitationem consequuntur odit, totam voluptatibus dignissimos ea, reprehenderit dolores
+                            aut itaque repudiandae sapiente laboriosam aspernatur eaque alias?</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/optional_banner_2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>UPCOMING EVENTS</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem officia numquam ea
+                            voluptatum similique nulla! Nemo rem, quo totam quae omnis, accusamus mollitia sit dicta eum
+                            aspernatur consequuntur reprehenderit expedita.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/optional_banner_1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>HOME</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio quidem perferendis,
+                            illum beatae cumque reprehenderit vitae in quod aspernatur cum ea laborum quo recusandae
+                            accusamus corrupti suscipit excepturi! Et, voluptates.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/optional_banner_4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>CONTACT</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et hic ab esse dolorem voluptatum
+                            quam, incidunt tempore modi beatae asperiores nam perspiciatis molestias obcaecati magni
+                            architecto ullam eos at! Iusto.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/optional_banner_5.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>STATS</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nisi pariatur minima enim
+                            laudantium nihil ducimus beatae. Qui, dicta expedita quaerat veniam in quos, aperiam
+                            provident eligendi velit enim officia!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="filtro">
+            <div class="checkbox">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Category
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Category
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Category
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Category
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Category
+                    </label>
+                </div>
+            </div>
+            <div class="buscador">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/books.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">Price</a>
+                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/cinema.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">Price</a>
+                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/costume_party.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">Price</a>
+                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/marathon.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">Price</a>
+                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-redes">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/facebook.png" alt="facebook" width="30" height="24">
+                </a>
+            </div>
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/instagram.png" alt="facebook" width="30" height="24">
+                </a>
+            </div>
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/whatsapp.png" alt="facebook" width="30" height="24">
+                </a>
+            </div>
+        </div>
+        <div class="container-text">
+            <h1>COHORT 01 TM - Alavila Cesar</h1>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
