@@ -22,10 +22,10 @@ body{
     flex-direction: column;
 }
 
-header{
+/* header{
     min-height: 15vh;
 
-}
+} */
 header .carousel-item img{
     height: 100%;
     height: 20rem;
@@ -33,7 +33,7 @@ header .carousel-item img{
 }
 
 main{ /*Modiique el  min-height de 75 a 50*/
-    min-height: 50vh;
+    /* min-height: 50vh; */
     flex-grow: 1;
 }
 
@@ -78,6 +78,7 @@ main.contacto {
 .cards {
     display: flex;
     justify-content: space-evenly;
+    padding: 1rem;
 }
 
 .card-body {
@@ -94,9 +95,12 @@ main.contacto {
 
 main.tabla {
     display: flex;
-    justify-content: center;
-    align-items: center;
     /* width: 100%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .container-tabla {
