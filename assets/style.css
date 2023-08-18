@@ -3,6 +3,24 @@
     padding: 0;
     margin: 0;
 }
+/*
+html y body: heigth 100%
+
+flex-direcion->column -> body
+
+main: flex grow 1
+
+*/
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 header{
     min-height: 15vh;
@@ -14,9 +32,31 @@ header .carousel-item img{
     object-fit: cover;
 }
 
-main{
-    min-height: 70vh;
+main{ /*Modiique el  min-height de 75 a 50*/
+    min-height: 50vh;
+    flex-grow: 1;
+}
 
+header.cabecera{
+    min-height: 7vh;
+}
+
+main.details{
+    min-height: 86vh;
+}
+
+footer.pie{
+    min-height: 7vh;
+}
+
+main.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    width: 50%;
 }
 
 .filtro {
@@ -52,6 +92,17 @@ main{
     align-items: center;
 }
 
+main.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.container-tabla {
+    width: 90%;
+}
+
 footer{
     min-height: 5vh;
     background-color: rgb(0, 0, 61);
@@ -66,4 +117,87 @@ footer{
 
 .container-redes {
     display: flex;
+}
+
+
+/********TABLAS**********/
+
+table {
+    height: 50vh;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+    text-align: left;
+    padding-left: 1rem;
+    color: darkblue;
+}
+
+th{
+    background-color: darkblue;
+    color: aliceblue;
+}
+
+tr.eventos {
+    background-color: greenyellow;
+
+}
+
+/* td:hover{
+    background-color: rgb(255, 242, 0); */
+    /* background-color: darkblue; */
+    /* color: aliceblue; */
+    /* color: rgb(255, 242, 0); */
+    /* transition: 0.5s;
+} */
+
+/*si quisiera alternar colores uso nth-child(odd)*/
+/* tr:nth-child(odd){
+    background-color: lightcyan;
+} */
+
+.info .title{
+    text-align: center;
+}
+
+dt, dd{
+    margin: 20px;
+}
+dd {
+    margin-left: 30px;
+}
+
+ul{
+    list-style: circle;
+    margin-left: 20px;
+}
+
+/*DETAILS*/
+main.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.details .card {
+    padding: 0.5rem;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    gap: 1rem;
+}
+
+main.details .card-body {
+    background-color: lightsteelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
 }
