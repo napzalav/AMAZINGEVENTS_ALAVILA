@@ -22,6 +22,10 @@ body{
     flex-direction: column;
 }
 
+body header .container-fluid .navbar-brand img{
+    width: 100px;
+}
+
 /* header{
     min-height: 15vh;
 
