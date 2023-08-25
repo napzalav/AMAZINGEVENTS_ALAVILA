@@ -1,30 +1,28 @@
-https://docs.google.com/presentation/d/e/2PACX-1vSXu5on51QpbKW8VMsgi3wJli7hVuCz7t5hLD43NZGkXjhkNqOnsTNkM6z1vNU97e-w44GUQ5iabPsy/pub?start=false&loop=false&delayms=3000&slide=id.p10
+Task 2 - Modulo 2
+Sprint 2
+https://docs.google.com/presentation/d/1_-S6W-1u1T4gQzL6AnrF44e0kukPJDUpJ9KJ9ypaYgo/edit#slide=id.p16
 
 
 ****************************
 *********MAIL ESP***********
 ****************************
 
-Bienvenido a Web Code Este es un momento emocionante para subir a bordo, ya que tenemos algunos nuevos proyectos en camino, como Amazing Events.
+Hola de nuevo,
 
-La idea es desarrollar la aplicación desde cero, pero primero necesitaré que nos envíes algunos ejercicios en javascript para ver tus habilidades en el lenguaje.
+Amazing Events nos ha enviado un archivo, con una muestra de cómo se almacenan los datos en su base de datos. Nos han pedido que incluyamos estos datos en los proyectos para ver como queda.
 
-vienes a nosotros como un experto en html/css, asi que se que te quiero en este proyecto. Todavía estoy trabajando con Amazing Events para aclarar lo que les gustaría que diéramos por ellos. Me reuniré con ellos esta semana, así que pronto tendré más detalles.
-
-Mientras trabajo con AE me gustaría que me enviaras un repositorio de GitHub con un modelo del sitio basado en el wireframe que te enviamos. Siéntete libre de elegir tu paleta de colores y hacer cualquier cambio de diseño que actualice la aplicación sin perder contenido.
+Te estaré enviando la información que el cliente nos envió para que puedas empezar a dinamizar tu aplicación usando el poder de Javascript.
 
 
 ****************************
 *********MAIL ENG***********
 ****************************
 
-Welcome to Web Code! This is an exciting time to get on board, as we have some new projects coming in, such as Amazing Events.
+Hello again,
 
-the idea is to develop the app from scratch, but first i'll need you to send us some exercises on javascript to see your abilities in the language.
+Amazing Events has sent us a file, with a sample of how the data is stored in its database. They asked us to include this data in the projects to see how it wod look.
 
-you come to us as an html/css expert, so i know i want you on this project. I'm still working with Amazing Events to clarify just what they'd like us to di for them. I'm meeting with them this week, so i'll have more detail soon.
-
-While i work  with AE i'd like you to send me a GitHub repository with a model of the site based on the wireframe we sent you. Feel free to choose your color palette and make any design changes that will upgrade the app without losing content.
+I'll be sending you the information that the client sent to us so that you can start making tha app dynamic using the power of Javascript
 
 
 
@@ -36,43 +34,48 @@ While i work  with AE i'd like you to send me a GitHub repository with a model o
 ****************************
 ****************************
 
-Eventos asombrosos paso a paso
+Paso a paso Eventos Increíbles
 
-Aquí encontrarás los pasos para completar tu primer sprint.
-Con cada sprint, progresivamente agregará funcionalidad al sitio.
 
-❗Recuerde que el estilo y la paleta del sitio dependen de usted y que puede realizar los cambios que desee en el diseño (siempre que el contenido permanezca completo).
+Aquí encontrarás los pasos para completar tu segundo sprint.
+Tenga en cuenta los comentarios que recibió en su sprint anterior y realice los cambios si es necesario.
 
-Para tu primer sprint necesitarás tus conocimientos en HTML y CSS, además de Bootstrap.
+Para este Sprint necesitarás el contenido proporcionado en estos talleres:
+_Introducción a JavaScript
+_Funciones
+_Condicionales
+_Arrays y objetos
+_Loops
+_DOM
 
-1er sprint _
+❗Recuerda que trabajarás en una nueva rama para cada sprint. Este debería ser "sprint2"
 
-◾Crearás 6 archivos html para:
--Inicio
--Eventos pasados
-​​-Próximos eventos
--Contacto
--Estadísticas
--Detalles
 
-◾Asigne un "título" correspondiente a cada una de las páginas y agregue un favicon a cada html
+2do sprint
 
-◾Recuerde al crear el sitio que la página Detalles no será parte de la barra de navegación, sino que cada tarjeta de evento debe llevarlo a ella.
+◾Crearás 3 archivos JS:
+-para la página de inicio
+-para la página de Eventos pasados
+​​-para la página de Próximos eventos
 
-◾Complete cada página con su contenido (como se muestra en la estructura alámbrica)
+◾Vincula tus archivos JS a su html correspondiente ⁓puedes verificar si se hizo correctamente con un console.log(“ Hola")⁓
 
-◾Puede diseñar su página con su archivo CSS personal, Bootstrap o una combinación de ambos.
-( CONSEJO : si usa Bootstrap, asegúrese de que el documento mantenga la semántica correcta)
+◾Cambie la extensión del archivo de datos a .js
 
-◾Una vez que haya terminado, cree un repositorio en GitHub "AmazingEvents(Name)LastName"
+◾Vincule su archivo de datos a sus archivos HTML. (Recuerde que tiene que estar encima del archivo JS que usará).
 
-◾Conecte su proyecto con el repositorio
+◾Tendrás que filtrar los eventos en los datos por fecha, usando js, ​​según en qué página te encuentres:
+-Home mostrará todos los eventos.
+-Pasado mostrará los eventos realizados antes de la "fecha actual" en los datos.
+-Upcoming mostrará los eventos que se llevarán a cabo después de la "fecha actual" en los datos.
 
-◾Agregue sus archivos al área de ensayo (git add . o git add file-name )
+◾Tendrás que mostrar la información de los eventos en cada página tal como lo hiciste para el 1er sprint usando JavaScript.
 
-◾Agrégalos a tu repositorio local (git commit –m “descripción”)
+◾Intenta ordenar tu código en funciones de responsabilidad única.
 
-◾Agréguelos a su repositorio remoto (git push origin nameOfBranch )
+◾Cuidado con espacios y comentarios innecesarios en el código.
+
+◾Una vez que haya terminado con su trabajo, agregue, confirme y empuje su proyecto a la rama (sprint2).
 
 ◾Envía tu sprint dejando el enlace a tu repositorio de GitHub.
 
@@ -88,40 +91,45 @@ Para tu primer sprint necesitarás tus conocimientos en HTML y CSS, además de B
 
 Step by step Amazing Events
 
-You’ll find here the steps to complete your first sprint.
-With each sprint you’ll be progressively adding functionality to the site.
 
-❗Remember that the style and palette of the site is up to you and that you can make any changes you want in design (as long as the content remains complete).
+You’ll find here the steps to complete your second sprint.
+Take into consideration the feedback you received in your previous sprint and make any changes if needed.
 
-For your first sprint you’ll need your knowledge in HTML & CSS, in addition to Bootstrap.
+For this Sprint you’ll need the content given in these workshops:
+_Introduction to JavaScript
+_Functions
+_Conditionals
+_Arrays & Objects
+_Loops
+_DOM
 
-1st Sprint
+❗Remember you’ll be working on a new branch for each sprint. This one should be “sprint2”
 
-◾You’ll create 6 html files for:
--Home
--Past Events
--Upcoming Events
--Contact
--Stats
--Details
 
-◾Assign a corresponding “title” to each of the pages and add a favicon to each html
+2nd  Sprint
 
-◾Remember when creating the site that the Details page won't be a part of the navbar, instead each event card must take you to it.
+◾You’ll create 3 JS files:
+-for the Home page
+-for the Past Events page
+-for the Upcoming Events page
 
-◾Complete each page with its content (as shown in the wireframe)
+◾Link your JS files to their corresponding html ⁓you can check if it’s done correctly with a console.log(“Hello”)⁓
 
-◾You can style your page with your personal CSS file, Bootstrap or a combination of both.
-(TIP: if you use Bootstrap make sure that the document maintains the correct semantic)
+◾Change the data file’s extension to .js
 
-◾Once you’re done, create a repository in GitHub “AmazingEvents(Name)LastName”
+◾Link your data file to your HTML files. (Remember that it has to be above the JS file you’ll be using).
 
-◾Connect your project with the repository
+◾You’ll have to filter the events in the data by date, using js, according to what page you are in:
+-Home will show all events.
+-Past will show the events held previous to the “current date” in the data.
+-Upcoming will show the events to be held after the “current date” in the data.
 
-◾Add your files to the staging area (git add . or git add file-name)
+◾You’ll have to show the information of the events on each page just as you did for the 1st sprint using JavaScript.
 
-◾Add them to your local repository (git commit –m “description”)
+◾Try to order your code in unique responsibility functions.
 
-◾Add them to your remote repository (git push origin nameOfBranch)
+◾Look out for unnecessary spaces and comments in the code.
+
+◾Once you’re done with your work add, commit and push your project to the branch (sprint2).
 
 ◾Submit your sprint leaving the link to your GitHub repository.
