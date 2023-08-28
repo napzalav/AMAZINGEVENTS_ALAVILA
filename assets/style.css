@@ -90,7 +90,7 @@ main.contacto {
     padding-right: 1rem;
 }
 
-.cards {
+.row {
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
