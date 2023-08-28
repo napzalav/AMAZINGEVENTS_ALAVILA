@@ -29,16 +29,20 @@ function mostrarUpcomingEvents(arrayData, ubicacion){
 
 
 
-function createCard(objeto) {
-    return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
-                <img src="${objeto.image}" class="card-img-top" alt="${objeto.name}">
-                <div class="card-body">
-                    <h5 class="card-title">${objeto.name}</h5>
-                    <p class="card-text">${objeto.description}</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#">$${objeto.price} USD</a>
-                    <a href="./details.html" class="btn btn-primary">Ver detalles</a>
-                </div>
-            </div>`;
-}
+// function createCard(objeto) {
+//     return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
+//                 <img src="${objeto.image}" class="card-img-top" alt="${objeto.name}">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${objeto.name}</h5>
+//                     <p class="card-text">${objeto.description}</p>
+//                 </div>
+//                 <div class="card-footer">
+//                     <a href="#">$${objeto.price} USD</a>
+//                     <a href="./details.html" class="btn btn-primary">Ver detalles</a>
+//                 </div>
+//             </div>`;
+// }
+
+
+
+//<p class="card-text">${objeto.date}</p>
