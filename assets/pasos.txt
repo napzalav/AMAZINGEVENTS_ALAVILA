@@ -1,6 +1,6 @@
-Task 2 - Modulo 2
-Sprint 2
-https://docs.google.com/presentation/d/1_-S6W-1u1T4gQzL6AnrF44e0kukPJDUpJ9KJ9ypaYgo/edit#slide=id.p16
+Task 3 - Modulo 2
+Sprint 3
+https://docs.google.com/presentation/d/1CDIRpL-lYKaFGMkywLS5t9BrNkMLE32YvV39SJzxXGY/edit#slide=id.p4
 
 
 ****************************
@@ -8,10 +8,10 @@ https://docs.google.com/presentation/d/1_-S6W-1u1T4gQzL6AnrF44e0kukPJDUpJ9KJ9ypa
 ****************************
 
 Hola de nuevo,
-
-Amazing Events nos ha enviado un archivo, con una muestra de cómo se almacenan los datos en su base de datos. Nos han pedido que incluyamos estos datos en los proyectos para ver como queda.
-
-Te estaré enviando la información que el cliente nos envió para que puedas empezar a dinamizar tu aplicación usando el poder de Javascript.
+Para nuestra próxima presentación Amazing Events ha pedido ver los filtros del sitio funcionando. Requieren la barra de búsqueda para filtrar eventos por nombre y la posibilidad de buscar eventos por su categoría.
+Los filtros deben incorporarse en las páginas Inicio, Eventos pasados y Eventos futuros.
+Además, requieren que la página de detalles del evento también se pueda utilizar para esta presentación.
+Con tus habilidades confiamos en que puedas conseguirlo.
 
 
 ****************************
@@ -19,10 +19,10 @@ Te estaré enviando la información que el cliente nos envió para que puedas em
 ****************************
 
 Hello again,
-
-Amazing Events has sent us a file, with a sample of how the data is stored in its database. They asked us to include this data in the projects to see how it wod look.
-
-I'll be sending you the information that the client sent to us so that you can start making tha app dynamic using the power of Javascript
+For our next presentation Amazing Events has asked to see the filters on the site working. They require the search bar to filter events by name and the possibility to search events by their category.
+The filters must be incorporated in the Home, Past Events and Future Events pages.
+Additionally, they require that the event details page can also be used for this presentation.
+With your skills we trust that you can achieve it.
 
 
 
@@ -34,50 +34,33 @@ I'll be sending you the information that the client sent to us so that you can s
 ****************************
 ****************************
 
-Paso a paso Eventos Increíbles
+Paso a paso
 
-
-Aquí encontrarás los pasos para completar tu segundo sprint.
-Tenga en cuenta los comentarios que recibió en su sprint anterior y realice los cambios si es necesario.
+Aquí encontrarás los pasos para completar tu tercer sprint.
+Tenga en cuenta los comentarios que recibió en su sprint anterior.
 
 Para este Sprint necesitarás el contenido proporcionado en estos talleres:
-_Introducción a JavaScript
-_Funciones
-_Condicionales
-_Arrays y objetos
-_Loops
-_DOM
+_Funciones de alto orden y métodos de matriz
+_Eventos
+_Parámetros de búsqueda de URL
 
-❗Recuerda que trabajarás en una nueva rama para cada sprint. Este debería ser "sprint2"
+3er sprint
 
+◾Tendrás que crear las casillas de verificación de categorías con JS.
 
-2do sprint
+◾Filtrarás los eventos mostrados según la casilla seleccionada y por lo que está escrito en el ingreso de texto (por categoría y nombre respectivamente).
 
-◾Crearás 3 archivos JS:
--para la página de inicio
--para la página de Eventos pasados
-​​-para la página de Próximos eventos
+◾Ambos filtros deben funcionar individualmente y combinados.
 
-◾Vincula tus archivos JS a su html correspondiente ⁓puedes verificar si se hizo correctamente con un console.log(“ Hola")⁓
+◾Ambos filtros deben estar en las páginas Inicio, Eventos pasados ​​y Eventos próximos.
 
-◾Cambie la extensión del archivo de datos a .js
+◾Recuerda que debes mostrar un mensaje si no hay coincidencias para la búsqueda del usuario.
 
-◾Vincule su archivo de datos a sus archivos HTML. (Recuerde que tiene que estar encima del archivo JS que usará).
+◾Elimine los console.logs innecesarios antes de enviar su tarea
 
-◾Tendrás que filtrar los eventos en los datos por fecha, usando js, ​​según en qué página te encuentres:
--Home mostrará todos los eventos.
--Pasado mostrará los eventos realizados antes de la "fecha actual" en los datos.
--Upcoming mostrará los eventos que se llevarán a cabo después de la "fecha actual" en los datos.
+◾ Una vez que haya terminado con su trabajo, agregue, confirme y envíe su proyecto a la rama (sprint3).
 
-◾Tendrás que mostrar la información de los eventos en cada página tal como lo hiciste para el 1er sprint usando JavaScript.
-
-◾Intenta ordenar tu código en funciones de responsabilidad única.
-
-◾Cuidado con espacios y comentarios innecesarios en el código.
-
-◾Una vez que haya terminado con su trabajo, agregue, confirme y empuje su proyecto a la rama (sprint2).
-
-◾Envía tu sprint dejando el enlace a tu repositorio de GitHub.
+◾Envía tu sprint dejando el enlace a tu repositorio de GitHub
 
 
 
@@ -89,47 +72,30 @@ _DOM
 ****************************
 ****************************
 
-Step by step Amazing Events
+Step by Step
 
-
-You’ll find here the steps to complete your second sprint.
-Take into consideration the feedback you received in your previous sprint and make any changes if needed.
+You’ll find here the steps to complete your third sprint.
+Take into consideration the feedback you received in your previous sprint.
 
 For this Sprint you’ll need the content given in these workshops:
-_Introduction to JavaScript
-_Functions
-_Conditionals
-_Arrays & Objects
-_Loops
-_DOM
+_High Ordered Functions & Array methods
+_Events
+_URL Search Params
 
-❗Remember you’ll be working on a new branch for each sprint. This one should be “sprint2”
+3rd Sprint
 
+◾You’ll need to create the category checkboxes with JS.
 
-2nd  Sprint
+◾You’ll filter the events shown according to the selected checkbox and by what is written in the text input (by category and name respectively).
 
-◾You’ll create 3 JS files:
--for the Home page
--for the Past Events page
--for the Upcoming Events page
+◾Both filters should work individually and combined.
 
-◾Link your JS files to their corresponding html ⁓you can check if it’s done correctly with a console.log(“Hello”)⁓
+◾Both filters must be in the Home, Past Events and Upcoming Events pages.
 
-◾Change the data file’s extension to .js
+◾Remember you must show a message if there are no matches for the user's search.
 
-◾Link your data file to your HTML files. (Remember that it has to be above the JS file you’ll be using).
+◾Remove the unnecessary console.logs before submitting your task
 
-◾You’ll have to filter the events in the data by date, using js, according to what page you are in:
--Home will show all events.
--Past will show the events held previous to the “current date” in the data.
--Upcoming will show the events to be held after the “current date” in the data.
+◾Once you’re done with your work add, commit and push your project to the branch (sprint3).
 
-◾You’ll have to show the information of the events on each page just as you did for the 1st sprint using JavaScript.
-
-◾Try to order your code in unique responsibility functions.
-
-◾Look out for unnecessary spaces and comments in the code.
-
-◾Once you’re done with your work add, commit and push your project to the branch (sprint2).
-
-◾Submit your sprint leaving the link to your GitHub repository.
+◾Submit your sprint leaving the link to your GitHub repository
