@@ -5,6 +5,9 @@ const contenedorTarjetas = document.getElementById("contenedorEventos")
 
 mostrarAllEvents(data.events, contenedorEventos)
 
+mostrarAllCheckbox(data.events, contenedorFiltro)
+
+
 
 
 //a la funcion mostrarAllEvents() le pasamos dos parametros
@@ -61,3 +64,6 @@ function mostrarAllEvents(arrayData, ubicacion){
 // </div>`;
 // contenedorEventos.innerHTML += card;
 // }
+
+
+

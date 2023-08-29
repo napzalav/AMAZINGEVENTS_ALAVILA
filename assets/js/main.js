@@ -198,7 +198,7 @@ const data = {
 
 //FUNCIONES
 
-function createCard(objeto){
+function createCard(objeto) {
   return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
               <img src="${objeto.image}" class="card-img-top" alt="${objeto.name}">
               <div class="card-body">
@@ -210,4 +210,57 @@ function createCard(objeto){
                   <a href="./details.html" class="btn btn-primary">Ver detalles</a>
               </div>
           </div>`
+}
+
+
+
+function createCheckbox(item) {
+  return `<div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="${item.category}">
+            <label class="form-check-label" for="${item.category}">
+                ${item.category}
+            </label>
+          </div>`
+}
+
+
+// function mostrarAllCheckbox(arrayData, ubicacion){
+//     let item = ""
+
+//     for(objeto of arrayData){
+//         item += createCheckbox(objeto)
+//     }
+//     ubicacion.innerHTML = item
+// }
+
+
+// function mostrarAllCheckbox(arrayData, ubicacion) {
+//   let uniqueCategories = new Set();
+
+//   arrayData.forEach(objeto => {
+//     uniqueCategories.add(objeto.category);
+//   });
+
+//   let checkboxes = [...uniqueCategories].reduce((accumulator, category) => {
+//     let checkbox = createCheckbox({ category: category });
+//     accumulator.push(checkbox);
+//     return accumulator;
+//   }, []);
+
+//   ubicacion.innerHTML = checkboxes.join('');
+// }
+
+function mostrarAllCheckbox(arrayData, ubicacion) {
+  const sinRepetirCategory = arrayData.reduce((categories, objeto) => {
+    if (!categories.includes(objeto.category)) {
+      categories.push(objeto.category);
+    }
+    return categories;
+  }, []);
+
+  const checkboxes = sinRepetirCategory.map(category => {
+    return createCheckbox({ category: category });
+  });
+
+  ubicacion.innerHTML = checkboxes.join('');
 }
