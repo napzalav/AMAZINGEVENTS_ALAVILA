@@ -28,21 +28,39 @@ function mostrarUpcomingEvents(arrayData, ubicacion){
 }
 
 
+//=========================FILTRO CHECKBOX===============================vvv
 
-// function createCard(objeto) {
-//     return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
-//                 <img src="${objeto.image}" class="card-img-top" alt="${objeto.name}">
-//                 <div class="card-body">
-//                     <h5 class="card-title">${objeto.name}</h5>
-//                     <p class="card-text">${objeto.description}</p>
-//                 </div>
-//                 <div class="card-footer">
-//                     <a href="#">$${objeto.price} USD</a>
-//                     <a href="./details.html" class="btn btn-primary">Ver detalles</a>
-//                 </div>
-//             </div>`;
-// }
+let categoryForm = document.querySelector('#contenedorFiltro');
 
+let dataFiltrada = [];
 
+let categoriasCheckeadas; //inicializacion
 
-//<p class="card-text">${objeto.date}</p>
+categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se produjeron cambios en input
+
+    categoriasCheckeadas = []; //asignacion de valores
+
+    if (e.target.classList.contains('form-check-input')) { //condicion q verifica si el elemento en el q se produjo el evento (input) tiene la clase "form-check-input"
+
+        const checkboxes = document.querySelectorAll('.form-check-input:checked'); //cada vez q un input cambia de estado a "checked" se almacena en la variable "checkboxes"
+        console.log(checkboxes);
+
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
+                categoriasCheckeadas.push(checkbox.value)
+            }
+        });
+    }
+    // console.log(categoriasCheckeadas);
+    createCard(categoriasCheckeadas);
+
+    //verifico que el array de categoriasCheckeadas sea superor a 0 porque esto quiere decir que existe al menos un elemento dentro.
+    //luego almaceno dentro de dataFiltrada cada evento que se encuentra dentro de la data.events y que haya sido checkeada (o sea marcada)
+
+    if (categoriasCheckeadas.length > 0) {
+        console.log(categoriasCheckeadas);
+        dataFiltrada = data.events.filter(evento => categoriasCheckeadas.includes(evento.category))
+
+        mostrarUpcomingEvents(dataFiltrada, contenedorEventos);
+    }
+})
