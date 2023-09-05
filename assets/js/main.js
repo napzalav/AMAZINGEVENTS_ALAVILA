@@ -195,6 +195,9 @@ const data = {
   ],
 };
 
+
+
+
 //FUNCIONES
 //la funcion createCard() necesita como paramentro un objeto y retorna una estructura HTML la cual contiene algunas caracteristicas del objeto, tales como "objeto.image", "objeto.name", "objeto.description", "objeto.price"
 function createCard(objeto) {
@@ -203,8 +206,6 @@ function createCard(objeto) {
               <div class="card-body">
                   <h5 class="card-title">${objeto.name}</h5>
                   <p class="card-text">${objeto.description}</p>
-                  <p class="card-text">${objeto.category}</p>
-
               </div>
               <div class="card-footer">
                   <a href="#">$${objeto.price} USD</a>

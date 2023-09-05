@@ -2,6 +2,8 @@
 
 const contenedorTarjetas = document.getElementById("contenedorEventos");
 
+let buscador = document.querySelector('input[name=busqueda]');
+
 mostrarUpcomingEvents(data.events, contenedorTarjetas);
 
 mostrarAllCheckbox(data.events, contenedorFiltro)
@@ -63,4 +65,14 @@ categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se pr
 
         mostrarUpcomingEvents(dataFiltrada, contenedorEventos);
     }
+})
+
+
+//========================= BUSCADOR ===============================
+
+buscador.addEventListener('input', ()=>{
+    let busqueda = buscador.value;
+    let dataFiltrada = data.events.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
+    console.log(dataFiltrada.name);
+    mostrarUpcomingEvents(dataFiltrada, contenedorEventos);
 })

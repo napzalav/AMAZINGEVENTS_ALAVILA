@@ -2,6 +2,8 @@
 
 const contenedorTarjetas = document.getElementById("contenedorEventos");
 
+let buscador = document.querySelector('input[name=busqueda]');
+
 mostrarPastEvents(data.events, contenedorTarjetas);
 
 mostrarAllCheckbox(data.events, contenedorFiltro)
@@ -25,7 +27,6 @@ function mostrarPastEvents(arrayData, ubicacion){
     }
     ubicacion.innerHTML = tarjetas;
 }
-
 
 
 //=========================FILTRO CHECKBOX===============================vvv
@@ -63,4 +64,14 @@ categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se pr
 
         mostrarPastEvents(dataFiltrada, contenedorEventos);
     }
+})
+
+
+//========================= BUSCADOR ===============================
+
+buscador.addEventListener('input', ()=>{
+    let busqueda = buscador.value;
+    let dataFiltrada = data.events.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
+    console.log(dataFiltrada.name);
+    mostrarPastEvents(dataFiltrada, contenedorEventos);
 })

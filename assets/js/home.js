@@ -2,14 +2,13 @@
 
 const contenedorTarjetas = document.getElementById("contenedorEventos")
 
+let buscador = document.querySelector('input[name=busqueda]');
+
 mostrarAllEvents(data.events, contenedorEventos)
 
 mostrarAllCheckbox(data.events, contenedorFiltro)
 
 // mostrarEventoFiltrado(categoriaSeleccionada, contenedorFiltro)
-
-
-
 //a la funcion mostrarAllEvents() le pasamos dos parametros
 //1-arrayData: es de donde vamos a extraer la informacion
 //2- ubicacion: es a donde vamos a colocar las tarjetas una vez finalice el for of
@@ -22,7 +21,6 @@ function mostrarAllEvents(arrayData, ubicacion) {
     }
     ubicacion.innerHTML = tarjetas
 }
-
 
 
 //=========================FILTRO CHECKBOX===============================vvv
@@ -60,4 +58,14 @@ categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se pr
 
         mostrarEventoFiltrado(dataFiltrada, contenedorEventos);
     }
+})
+
+
+//========================= BUSCADOR ===============================
+
+buscador.addEventListener('input', ()=>{
+    let busqueda = buscador.value;
+    let dataFiltrada = data.events.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
+    console.log(dataFiltrada.name);
+    mostrarEventoFiltrado(dataFiltrada, contenedorEventos);
 })
