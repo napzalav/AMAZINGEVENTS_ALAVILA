@@ -4,6 +4,8 @@ const contenedorTarjetas = document.getElementById("contenedorEventos");
 
 mostrarPastEvents(data.events, contenedorTarjetas);
 
+mostrarAllCheckbox(data.events, contenedorFiltro)
+
 
 //a diferencia de la funcion en home, en mostrarPastEvents() necesito obtener y guardar en una variable la fecha actual del array (let currentDate) para poder compararla en el bucle for que recorre todos los eventos
 //al inicio del bucle creamos un objeto Date a partir de la fecha del evento (objeto.date) y lo almacenamos en una variable (let eventDate)

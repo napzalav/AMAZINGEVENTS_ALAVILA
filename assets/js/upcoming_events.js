@@ -1,10 +1,10 @@
 // console.log("upcoming_events, la probadera");
 
-// console.log("**********" + data.currentDate + "***********");
-
 const contenedorTarjetas = document.getElementById("contenedorEventos");
 
 mostrarUpcomingEvents(data.events, contenedorTarjetas);
+
+mostrarAllCheckbox(data.events, contenedorFiltro)
 
 
 //a diferencia de la funcion en home, en mostrarUpcomingEvents() necesito obtener y guardar en una variable la fecha actual del array (let currentDate) para poder compararla en el bucle for que recorre todos los eventos

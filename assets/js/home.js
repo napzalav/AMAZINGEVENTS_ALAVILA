@@ -2,7 +2,6 @@
 
 const contenedorTarjetas = document.getElementById("contenedorEventos")
 
-
 mostrarAllEvents(data.events, contenedorEventos)
 
 mostrarAllCheckbox(data.events, contenedorFiltro)
@@ -16,9 +15,9 @@ mostrarAllCheckbox(data.events, contenedorFiltro)
 //2- ubicacion: es a donde vamos a colocar las tarjetas una vez finalice el for of
 //dentro de la funcion declaramos una variable (tarjetas) que se encuentra vacia, lista para almacenar las tarjetas procesadas con el for of, este bucle toma un objeto dentro de arrayData y lo convierte en una tarjeta, usando la funcion createCard()
 
-function mostrarAllEvents(arrayData, ubicacion){
+function mostrarAllEvents(arrayData, ubicacion) {
     let tarjetas = ""
-    for(objeto of arrayData){
+    for (objeto of arrayData) {
         tarjetas += createCard(objeto)
     }
     ubicacion.innerHTML = tarjetas
@@ -26,45 +25,39 @@ function mostrarAllEvents(arrayData, ubicacion){
 
 
 
-//la funcion createCard() necesita como paramentro un objeto y retorna una estructura HTML la cual contiene algunas caracteristicas del objeto, tales como "objeto.image", "objeto.name", "objeto.description", "objeto.price"
+//=========================FILTRO CHECKBOX===============================vvv
 
-// function createCard(objeto){
-//     return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
-//                 <img src="${objeto.image}" class="card-img-top" alt="${objeto.name}">
-//                 <div class="card-body">
-//                     <h5 class="card-title">${objeto.name}</h5>
-//                     <p class="card-text">${objeto.description}</p>
-//                 </div>
-//                 <div class="card-footer">
-//                     <a href="#">$${objeto.price} USD</a>
-//                     <a href="./details.html" class="btn btn-primary">Ver detalles</a>
-//                 </div>
-//             </div>`
-// }
+let categoryForm = document.querySelector('#contenedorFiltro');
 
+let dataFiltrada = [];
 
+let categoriasCheckeadas; //inicializacion
 
+categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se produjeron cambios en input
 
+    categoriasCheckeadas = []; //asignacion de valores
 
+    if (e.target.classList.contains('form-check-input')) { //condicion q verifica si el elemento en el q se produjo el evento (input) tiene la clase "form-check-input"
 
-//******este codigo fue rediseñado y adaptado en las funciones createCard() y mostrarAllEvents() */
+        const checkboxes = document.querySelectorAll('.form-check-input:checked'); //cada vez q un input cambia de estado a "checked" se almacena en la variable "checkboxes"
+        console.log(checkboxes);
 
-// let contenedorEventos = document.getElementById('contenedorEventos');
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
+                categoriasCheckeadas.push(checkbox.value)
+            }
+        });
+    }
+    // console.log(categoriasCheckeadas);
+    createCard(categoriasCheckeadas);
 
-// for(let event of data.events){
-//     let card = `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
-//     <img src="${event.image}" class="card-img-top" alt="${event.name}">
-//     <div class="card-body">
-//         <h5 class="card-title">${event.name}</h5>
-//         <p class="card-text">${event.description}</p>
-//     </div>
-//     <div class="card-footer">
-//         <a href="#">$${event.price} USD</a>
-//         <a href="./details.html" class="btn btn-primary">Go somewhere</a>
-//     </div>
-// </div>`;
-// contenedorEventos.innerHTML += card;
-// }
+    //verifico que el array de categoriasCheckeadas sea superor a 0 porque esto quiere decir que existe al menos un elemento dentro.
+    //luego almaceno dentro de dataFiltrada cada evento que se encuentra dentro de la data.events y que haya sido checkeada (o sea marcada)
 
+    if (categoriasCheckeadas.length > 0) {
+        console.log(categoriasCheckeadas);
+        dataFiltrada = data.events.filter(evento => categoriasCheckeadas.includes(evento.category))
 
-
+        mostrarEventoFiltrado(dataFiltrada, contenedorEventos);
+    }
+})

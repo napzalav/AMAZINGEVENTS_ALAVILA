@@ -1,0 +1,138 @@
+//filtrar eventos por categoría
+//uso querySelectorAll para capturar todos los elementos con la clase .form-check-input
+//El método forEach se utiliza para ejecutar una función proporcionada, una vez por cada elemento en una lista o arreglo
+//eventoFiltrado: filtro la lista de eventos según la categoría seleccionada
+//mostrarEventoFiltrado(): Llamo a la función para mostrar los eventos filtrados
+
+// const checkboxes = document.querySelectorAll('.form-check-input');
+// console.log(checkboxes);
+
+// checkboxes.forEach(checkbox => {
+//   checkbox.addEventListener('input', () => {
+//     const categoriaSeleccionada = checkbox.value;
+
+//     const eventoFiltrado = data.events.filter(event => event.category === categoriaSeleccionada);
+
+//     console.log(mostrarEventoFiltrado);
+//     mostrarEventoFiltrado(eventoFiltrado, contenedorEventos);
+
+//   });
+// });
+
+
+ //comparo el valor almacenado en categoriasCheckeadas con el de del valor de data.event.category y si coincide imprimo la tarjeta
+  // if (categoriasCheckeadas == data.events.category){
+  //   console.log(events.category);
+  // }
+  //const inputCheckeado = checkboxes.filter(checkbox => inputSeleccionado === checkbox.checked);
+
+  // checkboxes.forEach(checkbox => {
+  //   if(checkbox.value === events.category){
+  //     createCard(events);
+  //   }
+  // })
+
+  //1-nombre del checkbox:
+  //2tomar las categorias checheadas y por cada categoria filtrar la data de la base de datos (event)
+  //3- comparar el evento con mi dato y guardarlo en la variable
+  //4- pushear la data encontrada dentro de la variable
+
+
+  //console.log(inputCheckeado);
+
+
+  //convierto toda la coleccion de checkboxes en un array y lo mapeo para obtener un array de categorias y almacenarlo en categoriaSeleccionada
+// let categoriaSeleccionada = Array.from(checkboxes)
+// .map(checkbox =>
+//   checkbox.dataset.category);
+// console.log(checkbox)
+// console.log(categoriaSeleccionada);
+
+// const filtrarEventoPorCategoria = data.events.filter(event => categoriaSeleccionada.includes(event.category)); //filtro todos los eventos desde el array "data"
+
+
+//comparo valores
+// if(checkboxes.length === 0){
+//   // mostrarAllEvents(arrayData, ubicacion);
+//   mostrarEventoFiltrado(filtrarEventoPorCategoria, contenedorEventos);
+// }else {
+//   let categoriaSeleccionada = data.events.filter(event => categoriaSeleccionada.includes(event.category));
+// };
+// mostrarEventoFiltrado(categoriaSeleccionada, contenedorEventos)
+
+
+// function updateFilteredEvents(events, ubicacion) {
+//   const checkboxes = document.querySelectorAll('input[name="category"]');
+//   const selectedCategories = Array.from(checkboxes)
+//     .filter((checkbox) => checkbox.checked)
+//     .map((checkbox) => checkbox.value);
+//   if (selectedCategories.length === 0) {
+//     mostrarEventoFiltrado(events, idContenedor);
+//   } else {
+//     const arrayFiltrado = events.filter((e) =>
+//       selectedCategories.includes(e.category)
+//     );
+//     mostrarEventoFiltrado(arrayFiltrado, ubicacion);
+//   }
+// }
+
+
+// function filtrarEventoPorCategoria(events, categories) {
+//   if (categories.length > 0) {
+//     return events;
+//   }
+//   return events.filter(event => categories.includes(event.category));
+// }
+
+
+// checkboxes.forEach(input => {
+//   input.addEventListener('change', () => {
+//     let arrayCheckeados = Array.from(checkboxes);
+//     arrayCheckeados = arrayCheckeados.filter(check => check.checked).map(input => input.value == "true");
+//     if (arrayCheckeados.length > 0) {
+//       let filtrarEventoPorCategoria = events.filter(event => arrayCheckeados.includes(events.category));
+//       mostrarEventoFiltrado(filtrarEventoPorCategoria, contenedorFiltro)
+//     }
+//   })
+// })
+
+
+
+
+//la funcion createCard() necesita como paramentro un objeto y retorna una estructura HTML la cual contiene algunas caracteristicas del objeto, tales como "objeto.image", "objeto.name", "objeto.description", "objeto.price"
+
+// function createCard(objeto){
+//     return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
+//                 <img src="${objeto.image}" class="card-img-top" alt="${objeto.name}">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${objeto.name}</h5>
+//                     <p class="card-text">${objeto.description}</p>
+//                 </div>
+//                 <div class="card-footer">
+//                     <a href="#">$${objeto.price} USD</a>
+//                     <a href="./details.html" class="btn btn-primary">Ver detalles</a>
+//                 </div>
+//             </div>`
+// }
+
+
+
+
+//******este codigo fue rediseñado y adaptado en las funciones createCard() y mostrarAllEvents() */
+
+// let contenedorEventos = document.getElementById('contenedorEventos');
+
+// for(let event of data.events){
+//     let card = `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
+//     <img src="${event.image}" class="card-img-top" alt="${event.name}">
+//     <div class="card-body">
+//         <h5 class="card-title">${event.name}</h5>
+//         <p class="card-text">${event.description}</p>
+//     </div>
+//     <div class="card-footer">
+//         <a href="#">$${event.price} USD</a>
+//         <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+//     </div>
+// </div>`;
+// contenedorEventos.innerHTML += card;
+// }
