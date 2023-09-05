@@ -194,6 +194,7 @@ const data = {
     },
   ],
 };
+// console.log(data.events);
 
 
 //FUNCIONES
@@ -204,6 +205,8 @@ function createCard(objeto) {
               <div class="card-body">
                   <h5 class="card-title">${objeto.name}</h5>
                   <p class="card-text">${objeto.description}</p>
+                  <p class="card-text">${objeto.category}</p>
+
               </div>
               <div class="card-footer">
                   <a href="#">$${objeto.price} USD</a>
@@ -215,7 +218,7 @@ function createCard(objeto) {
 
 function createCheckbox(item) {
   return `<div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="${item.category}">
+            <input class="form-check-input" type="checkbox" value="${item.category}" id="${item.category}" >
             <label class="form-check-label" for="${item.category}">
                 ${item.category}
             </label>
@@ -223,7 +226,7 @@ function createCheckbox(item) {
 }
 
 
-
+//funcion para crear todos los checkbox existentes en data sin repetir
 function mostrarAllCheckbox(arrayData, ubicacion) {
   const sinRepetirCategory = arrayData.reduce((categorias, objeto) => {
     if (!categorias.includes(objeto.category)) {
@@ -238,3 +241,180 @@ function mostrarAllCheckbox(arrayData, ubicacion) {
 
   ubicacion.innerHTML = checkboxes.join('');
 }
+
+
+
+
+
+
+
+
+//filtrar eventos por categoría
+//uso querySelectorAll para capturar todos los elementos con la clase .form-check-input
+//El método forEach se utiliza para ejecutar una función proporcionada, una vez por cada elemento en una lista o arreglo
+//eventoFiltrado: filtro la lista de eventos según la categoría seleccionada
+//mostrarEventoFiltrado(): Llamo a la función para mostrar los eventos filtrados
+
+// const checkboxes = document.querySelectorAll('.form-check-input');
+// console.log(checkboxes);
+
+// checkboxes.forEach(checkbox => {
+//   checkbox.addEventListener('input', () => {
+//     const categoriaSeleccionada = checkbox.value;
+
+//     const eventoFiltrado = data.events.filter(event => event.category === categoriaSeleccionada);
+
+//     console.log(mostrarEventoFiltrado);
+//     mostrarEventoFiltrado(eventoFiltrado, contenedorEventos);
+
+//   });
+// });
+
+//========================================================vvv
+
+// let categoriaSeleccionada = [];
+let categoryForm = document.querySelector('#contenedorFiltro');
+
+let dataFiltrada = [];
+
+let categoriasCheckeadas; //inicializacion
+
+// categoryForm.addEventListener('change', (e) => {
+//   checkboxes
+// })
+
+categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se produjeron cambios en input
+
+  categoriasCheckeadas = []; //asignacion de valores
+
+  if (e.target.classList.contains('form-check-input')) { //condicion q verifica si el elemento en el q se produjo el evento (input) tiene la clase "form-check-input"
+
+    const checkboxes = document.querySelectorAll('.form-check-input:checked'); //cada vez q un input cambia de estado a "checked" se almacena en la variable "checkboxes"
+    console.log(checkboxes);
+
+    checkboxes.forEach(checkbox => {
+      if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
+        categoriasCheckeadas.push(checkbox.value)
+      }
+    });
+
+  }
+  console.log(categoriasCheckeadas);
+  createCard(categoriasCheckeadas);
+
+  //comparo el valor almacenado en categoriasCheckeadas con el de del valor de data.event.category y si coincide imprimo la tarjeta
+  // if (categoriasCheckeadas == data.events.category){
+  //   console.log(events.category);
+  // }
+  //const inputCheckeado = checkboxes.filter(checkbox => inputSeleccionado === checkbox.checked);
+
+  // checkboxes.forEach(checkbox => {
+  //   if(checkbox.value === events.category){
+  //     createCard(events);
+  //   }
+  // })
+
+  //1-nombre del checkbox:
+  //2tomar las categorias checheadas y mapearlas y por cada categoria filtrar la data de la base de datos (event)
+  //3- comparar el evento con mi dato y guardarlo en la variable
+  //4- pushear la data encontrada dentro de la variable
+
+
+  //console.log(inputCheckeado);
+
+  if (categoriasCheckeadas.length > 0) {
+    console.log(categoriasCheckeadas);
+    dataFiltrada = data.events.filter(evento => categoriasCheckeadas.includes(evento.category))
+
+    mostrarEventoFiltrado(dataFiltrada, contenedorEventos);
+  }
+
+
+})
+
+
+
+//convierto toda la coleccion de checkboxes en un array y lo mapeo para obtener un array de categorias y almacenarlo en categoriaSeleccionada
+// let categoriaSeleccionada = Array.from(checkboxes)
+// .map(checkbox => 
+//   checkbox.dataset.category); 
+// console.log(checkbox))
+// console.log(categoriaSeleccionada);
+
+// const filtrarEventoPorCategoria = data.events.filter(event => categoriaSeleccionada.includes(event.category)); //filtro todos los eventos desde el array "data"
+
+
+
+
+//comparo valores
+// if(checkboxes.length === 0){
+//   // mostrarAllEvents(arrayData, ubicacion);
+//   mostrarEventoFiltrado(filtrarEventoPorCategoria, contenedorEventos);
+// }else {
+//   let categoriaSeleccionada = data.events.filter(event => categoriaSeleccionada.includes(event.category));
+// };
+// mostrarEventoFiltrado(categoriaSeleccionada, contenedorEventos)
+
+
+
+
+
+
+
+
+
+
+// function updateFilteredEvents(events, ubicacion) {
+//   const checkboxes = document.querySelectorAll('input[name="category"]');
+//   const selectedCategories = Array.from(checkboxes)
+//     .filter((checkbox) => checkbox.checked)
+//     .map((checkbox) => checkbox.value);
+//   if (selectedCategories.length === 0) {
+//     mostrarEventoFiltrado(events, idContenedor);
+//   } else {
+//     const arrayFiltrado = events.filter((e) =>
+//       selectedCategories.includes(e.category)
+//     );
+//     mostrarEventoFiltrado(arrayFiltrado, ubicacion);
+//   }
+// }
+
+
+
+
+
+
+
+
+
+//=======================================================^^^^
+// funcion para mostrar eventos filtrados tiene la estructura igual a mostrarAllEvents()
+function mostrarEventoFiltrado(arrayFiltrado, ubicacion) {
+  let tarjetas = "";
+  for (objeto of arrayFiltrado) {
+    tarjetas += createCard(objeto);
+  }
+  ubicacion.innerHTML = tarjetas;
+}
+//=========================================================
+
+
+// function filtrarEventoPorCategoria(events, categories) {
+//   if (categories.length > 0) {
+//     return events;
+//   }
+//   return events.filter(event => categories.includes(event.category));
+// }
+
+
+// checkboxes.forEach(input => {
+//   input.addEventListener('change', () => {
+//     let arrayCheckeados = Array.from(checkboxes);
+//     arrayCheckeados = arrayCheckeados.filter(check => check.checked).map(input => input.value == "true");
+//     if (arrayCheckeados.length > 0) {
+//       let filtrarEventoPorCategoria = events.filter(event => arrayCheckeados.includes(events.category));
+//       mostrarEventoFiltrado(filtrarEventoPorCategoria, contenedorFiltro)
+//     }
+//   })
+// })
+

@@ -7,6 +7,7 @@ mostrarAllEvents(data.events, contenedorEventos)
 
 mostrarAllCheckbox(data.events, contenedorFiltro)
 
+// mostrarEventoFiltrado(categoriaSeleccionada, contenedorFiltro)
 
 
 
