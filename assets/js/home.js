@@ -23,7 +23,7 @@ function mostrarAllEvents(arrayData, ubicacion) {
             tarjetas += createCard(objeto);
         }
         ubicacion.innerHTML = tarjetas;
-        error.innerHTML = ""; //el mensaje derror aparecerá vacio si es que se encuentran resultados compatibles con la busqueda
+        error.innerHTML = ""; //el mensaje de error quedará vacio si es que se encuentran resultados compatibles con la busqueda
     } else {
         console.log("Error: No se encontraron resultados");
         error.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;

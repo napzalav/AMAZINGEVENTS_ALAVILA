@@ -195,9 +195,6 @@ const data = {
   ],
 };
 
-
-
-
 //FUNCIONES
 //la funcion createCard() necesita como paramentro un objeto y retorna una estructura HTML la cual contiene algunas caracteristicas del objeto, tales como "objeto.image", "objeto.name", "objeto.description", "objeto.price"
 function createCard(objeto) {
@@ -209,7 +206,7 @@ function createCard(objeto) {
               </div>
               <div class="card-footer">
                   <a href="#">$${objeto.price} USD</a>
-                  <a href="./details.html" class="btn btn-primary">Details</a>
+                  <a href="./details.html?id=${objeto.id}" class="btn btn-primary">Details</a>
               </div>
           </div>`
 }
@@ -243,4 +240,26 @@ function mostrarAllCheckbox(arrayData, ubicacion) {
 
 
 
+//==========DETAILS==============
+const containerCard = document.getElementById('containerCard');
 
+function detailCard(objeto) {
+  // console.log(objeto);
+  return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
+            <div class="card-img">
+                <img src="${objeto.image}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h2>${objeto.name}</h2>
+                <p>${objeto.category}</p>
+                <p>${objeto.description}</p>
+                </div>
+                <div class="card-footer">
+                <p>$${objeto.price} USD</p>
+                <p>${objeto.date}</p>
+            </div>
+          </div>`
+}
+
+detailCard(data.events, containerCard)
+// console.log(detailCard);
