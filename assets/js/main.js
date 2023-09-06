@@ -206,7 +206,7 @@ function createCard(objeto) {
               </div>
               <div class="card-footer">
                   <a href="#">$${objeto.price} USD</a>
-                  <a href="./details.html?id=${objeto.id}" class="btn btn-primary">Details</a>
+                  <a href="./details.html?id=${objeto._id}" class="btn btn-primary">Details</a>
               </div>
           </div>`
 }
@@ -237,29 +237,3 @@ function mostrarAllCheckbox(arrayData, ubicacion) {
 
   ubicacion.innerHTML = checkboxes.join('');
 }
-
-
-
-//==========DETAILS==============
-const containerCard = document.getElementById('containerCard');
-
-function detailCard(objeto) {
-  // console.log(objeto);
-  return `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
-            <div class="card-img">
-                <img src="${objeto.image}" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-                <h2>${objeto.name}</h2>
-                <p>${objeto.category}</p>
-                <p>${objeto.description}</p>
-                </div>
-                <div class="card-footer">
-                <p>$${objeto.price} USD</p>
-                <p>${objeto.date}</p>
-            </div>
-          </div>`
-}
-
-detailCard(data.events, containerCard)
-// console.log(detailCard);

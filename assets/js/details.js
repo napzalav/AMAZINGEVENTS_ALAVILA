@@ -1,31 +1,52 @@
-console.log(document.location);
-console.log(document.location.search);
-
 //DOM Selector
+const containerCard = document.getElementById('containerCard');
+
+let quearySearch = location.search;
+
+const id = new URLSearchParams(quearySearch).get("id");
+
+let eventito = data.events.find((evento) => evento._id == id);
+console.log(eventito);
+
+//==========DETAILS==============
 // const containerCard = document.getElementById('containerCard');
 
+function detailCard() {
+    // console.log(objeto);
+    document.getElementById("containerCard").innerHTML =
+    // `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
+    //             <div class="card-img">
+    //                 <img src="${eventito.image}" class="card-img-top" alt="...">
+    //             </div>
+    //             <div class="card-body">
+    //                 <h2>${eventito.name}</h2>
+    //                 <p>${eventito.category}</p>
+    //                 <p>${eventito.description}</p>
+    //             </div>
+    //             <div class="card-footer">
+    //                 <p>$${eventito.price} USD</p>
+    //                 <p>${eventito.date}</p>
+    //             </div>
+    //         </div>`
+`<div class="card col-11 col-xl-2">
+<div class="card-img">
+    <img src="${eventito.image}" class="card-img-top" alt="{eventito.name}">
+</div>
+<div class="info">
+    <div class="card-body">
+        <h2>${eventito.name}</h2>
+        <p>${eventito.category}</p>
+        <p>${eventito.description}</p>
+    </div>
+    <div class="card-footer">
+        <p>$${eventito.price} USD</p>
+        <p>${eventito.date}</p>
+    </div>
+</div>
+</div>`
 
-//Filtrando eventos - desestructuramos los eventos desde la data
-const { events } = data;
-// console.log(events);
-const eventoDetallado = events.filter( evento => evento.category)
-console.log(eventoDetallado);
+}
 
+detailCard()
+console.log(detailCard);
 
-//Creando nuestro objeto de eventos con la data obtenida
-const nuevoDetalle = eventoDetallado.map(evento => {
-    let eventoDt = {};
-    eventoDt.id = evento._id;
-    eventoDt.name = evento.name;
-    eventoDt.image = evento.image;
-    eventoDt.date = evento.date;
-    eventoDt.description = evento.description;
-    eventoDt.category = evento.category;
-    eventoDt.price = evento.price;
-
-    return eventoDt;
-})
-
-//URLSearchParams
-//Creacion de card
-detailCard(data.events);
