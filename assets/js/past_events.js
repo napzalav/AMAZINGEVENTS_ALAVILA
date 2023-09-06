@@ -13,65 +13,78 @@ mostrarAllCheckbox(data.events, contenedorFiltro)
 //al inicio del bucle creamos un objeto Date a partir de la fecha del evento (objeto.date) y lo almacenamos en una variable (let eventDate)
 //realizamos la comparacion de las variables guardadas (eventDate y currentDate) de esta manera nos aseguramos que solo se creen las tarjetas de aquellos eventos cuya fecha sea anterior a la fecha actual (eventDate < currentDate)
 
-function mostrarPastEvents(arrayData, ubicacion){
+function mostrarPastEvents(arrayData, ubicacion) {
     let tarjetas = "";
+    let error = document.getElementById("error");
     let currentDate = new Date(data.currentDate);
     // console.log("=========" + currentDate + "===========");
 
-    for (objeto of arrayData) {
-        let eventDate = new Date(objeto.date);
-        if (eventDate < currentDate) {
-            // console.log(eventDate);
-            tarjetas += createCard(objeto);
+    if (arrayData.length > 0) {
+        for (objeto of arrayData) {
+            let eventDate = new Date(objeto.date);
+            if (eventDate < currentDate) {
+                // console.log(eventDate);
+                tarjetas += createCard(objeto);
+            }
+            ubicacion.innerHTML = tarjetas;
+            error.innerHTML = "";
         }
+    } else {
+        console.log("Error: No se encontraron resultados");
+        error.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;
+        // ubicacion.innerHTML = "";
     }
-    ubicacion.innerHTML = tarjetas;
 }
 
 
 //=========================FILTRO CHECKBOX===============================vvv
 
 let categoryForm = document.querySelector('#contenedorFiltro');
-
 let dataFiltrada = [];
 
-let categoriasCheckeadas; //inicializacion
+//let categoriasCheckeadas; //inicializacion
 
 categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se produjeron cambios en input
-
     categoriasCheckeadas = []; //asignacion de valores
 
     if (e.target.classList.contains('form-check-input')) { //condicion q verifica si el elemento en el q se produjo el evento (input) tiene la clase "form-check-input"
 
-        const checkboxes = document.querySelectorAll('.form-check-input:checked'); //cada vez q un input cambia de estado a "checked" se almacena en la variable "checkboxes"
-        console.log(checkboxes);
-
-        checkboxes.forEach(checkbox => {
-            if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
-                categoriasCheckeadas.push(checkbox.value)
-            }
-        });
+        filtrarYMostrar(data.events);
     }
-    // console.log(categoriasCheckeadas);
-    createCard(categoriasCheckeadas);
+})
+
+
+//====================COMBINACION DE FILTRO Y BUSCADOR ===============================
+
+buscador.addEventListener('input', () => {
+    filtrarYMostrar(data.events);
+})
+
+
+function filtrarYMostrar(array) {
+    //=========Buscador========
+    let busqueda = buscador.value;
+    let dataFiltrada = array.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
+    // console.log(dataFiltrada.name);
+
+    //=========Filtro checkbox========
+    let categoriasCheckeadas = [];
+
+    const checkboxes = document.querySelectorAll('.form-check-input:checked'); //cada vez q un input cambia de estado a "checked" se almacena en la variable "checkboxes"
+    // console.log(checkboxes);
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
+            categoriasCheckeadas.push(checkbox.value)
+        }
+        // console.log(categoriasCheckeadas);
+    });
 
     //verifico que el array de categoriasCheckeadas sea superor a 0 porque esto quiere decir que existe al menos un elemento dentro.
     //luego almaceno dentro de dataFiltrada cada evento que se encuentra dentro de la data.events y que haya sido checkeada (o sea marcada)
-
     if (categoriasCheckeadas.length > 0) {
-        console.log(categoriasCheckeadas);
-        dataFiltrada = data.events.filter(evento => categoriasCheckeadas.includes(evento.category))
-
-        mostrarPastEvents(dataFiltrada, contenedorEventos);
+        dataFiltrada = dataFiltrada.filter(evento => categoriasCheckeadas.includes(evento.category))
     }
-})
 
-
-//========================= BUSCADOR ===============================
-
-buscador.addEventListener('input', ()=>{
-    let busqueda = buscador.value;
-    let dataFiltrada = data.events.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
-    console.log(dataFiltrada.name);
-    mostrarPastEvents(dataFiltrada, contenedorEventos);
-})
+    mostrarPastEvents(dataFiltrada, contenedorEventos)
+}

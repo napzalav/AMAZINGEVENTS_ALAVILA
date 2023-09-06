@@ -242,45 +242,5 @@ function mostrarAllCheckbox(arrayData, ubicacion) {
 }
 
 
-//==================funcion para mostrar eventos filtrados========================
-//tiene la estructura igual a mostrarAllEvents()
 
-// function mostrarEventoFiltrado(arrayFiltrado, ubicacion) {
-//   let tarjetas = "";
-//   for (objeto of arrayFiltrado) {
-//     tarjetas += createCard(objeto);
-//   }
-//   ubicacion.innerHTML = tarjetas;
-// }
-
-
-
-//================= COMBINACION DE FILTRO Y BUSCADOR ========================
-
-// if (e.target.classList.contains('form-check-input'));
-
-// function filtrarYMostrar(array) {
-//   let busqueda = buscador.value;
-//   let dataFiltrada = data.events.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
-//   console.log(dataFiltrada.name);
-
-//   categoriasCheckeadas = [];
-
-//   const checkboxes = document.querySelectorAll('.form-check-input:checked');
-//   console.log(checkboxes);
-
-//   checkboxes.forEach(checkbox => {
-//     if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
-//       categoriasCheckeadas.push(checkbox.value)
-//     }
-//   });
-
-//   createCard(categoriasCheckeadas);
-
-//   if (categoriasCheckeadas.length > 0) {
-//     console.log(categoriasCheckeadas);
-//     dataFiltrada = dataFiltrada.filter(evento => categoriasCheckeadas.includes(evento.category));
-//   }
-//   mostrarEventoFiltrado(dataFiltrada, contenedorEventos);
-// }
 
