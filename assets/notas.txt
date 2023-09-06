@@ -261,3 +261,25 @@ buscador.addEventListener('input', () => {
     console.log(dataFiltrada.name);
     mostrarUpcomingEvents(dataFiltrada, contenedorEventos);
 })
+
+
+====================================DETAILS====================================================
+//================= Function ========================
+function detailCard() {
+    // console.log(objeto);
+    document.getElementById("containerCard").innerHTML =
+    // `<div class="card col-11 col-sm-4 col-md-3 col-xl-2">
+    //             <div class="card-img">
+    //                 <img src="${eventito.image}" class="card-img-top" alt="...">
+    //             </div>
+    //             <div class="card-body">
+    //                 <h2>${eventito.name}</h2>
+    //                 <p>${eventito.category}</p>
+    //                 <p>${eventito.description}</p>
+    //             </div>
+    //             <div class="card-footer">
+    //                 <p>$${eventito.price} USD</p>
+    //                 <p>${eventito.date}</p>
+    //             </div>
+    //         </div>`
+//}
