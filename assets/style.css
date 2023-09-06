@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+
 /*
 html y body: heigth 100%
 
@@ -12,17 +13,17 @@ main: flex grow 1
 
 */
 
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-body header .container-fluid .navbar-brand img{
+body header .container-fluid .navbar-brand img {
     width: 100px;
 }
 
@@ -30,7 +31,7 @@ body header .container-fluid .navbar-brand img{
     min-height: 15vh;
 
 } */
-header .carousel-item img{
+header .carousel-item img {
     height: 100%;
     height: 20rem;
     object-fit: cover;
@@ -38,27 +39,29 @@ header .carousel-item img{
 
 .carousel-caption h5 {
     font-size: 5rem;
-    filter: drop-shadow(3px 3px 1px rgb(217,3,104));
+    filter: drop-shadow(3px 3px 1px rgb(217, 3, 104));
 }
 
 .carousel-caption {
     bottom: 5rem;
 }
 
-main{ /*Modiique el  min-height de 75 a 50*/
+main {
+    /*Modiique el  min-height de 75 a 50*/
     /* min-height: 50vh; */
     flex-grow: 1;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='32' height='32' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M37.657 10.343l-4.243 4.243m-2.828 2.828l-4.243 4.243m11.314 0l-4.243-4.243m-2.828-2.828l-4.243-4.243m-20.686 0l-4.243 4.243m-2.828 2.828l-4.243 4.243m11.314 0l-4.243-4.243m-2.828-2.828l-4.243-4.243'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(240, 100%, 12%, 1)' fill='none'/><path d='M16-8v6m0 4v6m8-8h-6m-4 0H8m8 24v6m0 4v6m8-8h-6m-4 0H8'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(332, 97%, 43%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
 }
 
-header.cabecera{
+header.cabecera {
     min-height: 7vh;
 }
 
-main.details{
+main.details {
     min-height: 86vh;
 }
 
-footer.pie{
+footer.pie {
     min-height: 7vh;
 }
 
@@ -103,11 +106,11 @@ main.contacto {
     margin: 0;
 }
 
-.card{
+.card {
     box-shadow: 5px 5px 10px;
 }
 
-.card:hover{
+.card:hover {
     background-color: rgba(255, 255, 0, 0.260);
     transition: 0.5s;
 }
@@ -138,7 +141,7 @@ main.tabla {
     width: 90%;
 }
 
-footer{
+footer {
     min-height: 5vh;
     background-color: rgb(0, 0, 61);
     color: aliceblue;
@@ -161,14 +164,16 @@ table {
     width: 100%;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid;
     text-align: left;
     padding-left: 1rem;
     color: darkblue;
 }
 
-th{
+th {
     background-color: darkblue;
     color: aliceblue;
 }
@@ -180,10 +185,10 @@ tr.eventos {
 
 /* td:hover{
     background-color: rgb(255, 242, 0); */
-    /* background-color: darkblue; */
-    /* color: aliceblue; */
-    /* color: rgb(255, 242, 0); */
-    /* transition: 0.5s;
+/* background-color: darkblue; */
+/* color: aliceblue; */
+/* color: rgb(255, 242, 0); */
+/* transition: 0.5s;
 } */
 
 /*si quisiera alternar colores uso nth-child(odd)*/
@@ -191,23 +196,26 @@ tr.eventos {
     background-color: lightcyan;
 } */
 
-.info .title{
+.info .title {
     text-align: center;
 }
 
-dt, dd{
+dt,
+dd {
     margin: 20px;
 }
+
 dd {
     margin-left: 30px;
 }
 
-ul{
+ul {
     list-style: circle;
     margin-left: 20px;
 }
 
-/*DETAILS*/
+/*========DETAILS=========*/
+
 main.details {
     display: flex;
     justify-content: center;
@@ -217,7 +225,7 @@ main.details {
 main.details .card {
     padding: 0.5rem;
     /* background-color: greenyellow; */
-    background-color: rgb(217,3,104);
+    background-color: rgb(217, 3, 104);
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -231,23 +239,23 @@ main.details .card-body {
     flex-direction: column;
     align-items: center;
     height: 80%;
+    color: darkblue
 }
 
 .navbar-collapse {
     flex-grow: 0;
 }
 
-/******************************/
-/******** RESPONSIVE *********/
-/******************************/
+/************************************************************/
+/******** RESPONSIVE ***************** RESPONSIVE *********/
+/************************************************************/
 /* (max-width: 520px) (750px)*/
-@media (max-width: 840px){
+@media (max-width: 840px) {
     .filtro {
         /* display: flex;
         align-items: center;
         justify-content: space-between; */
         flex-direction: column;
-
     }
 
     .buscador {
@@ -265,6 +273,20 @@ main.details .card-body {
         gap: 1.5rem;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+
+    /*========DETAILS=========*/
+    main.details .card {
+        /* padding: 0.5rem;
+        background-color: rgb(217, 3, 104);
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        align-items: center;
+        gap: 1rem; */
+        display: block;
+        width: 70%;
     }
 
 }
