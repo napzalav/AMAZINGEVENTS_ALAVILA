@@ -1,6 +1,6 @@
-Task 3 - Modulo 2
-Sprint 3
-https://docs.google.com/presentation/d/1CDIRpL-lYKaFGMkywLS5t9BrNkMLE32YvV39SJzxXGY/edit#slide=id.p4
+Task 4 - Modulo 2
+Sprint 4
+https://docs.google.com/presentation/d/1d9KAsLV5TIjwLRKaArMJkTt65nUwR4jRqz7ylPUYRzE/edit#slide=id.p4
 
 
 ****************************
@@ -8,10 +8,13 @@ https://docs.google.com/presentation/d/1CDIRpL-lYKaFGMkywLS5t9BrNkMLE32YvV39SJzx
 ****************************
 
 Hola de nuevo,
-Para nuestra próxima presentación Amazing Events ha pedido ver los filtros del sitio funcionando. Requieren la barra de búsqueda para filtrar eventos por nombre y la posibilidad de buscar eventos por su categoría.
-Los filtros deben incorporarse en las páginas Inicio, Eventos pasados y Eventos futuros.
-Además, requieren que la página de detalles del evento también se pueda utilizar para esta presentación.
-Con tus habilidades confiamos en que puedas conseguirlo.
+Has hecho un excelente trabajo con las presentaciones, ahora es el momento de integrar tu aplicación web a la base de datos, y completar la página de estadísticas. 
+Aquí está el enlace a la API
+https://mindhub-xj03.onrender.com/api/amazing
+Una vez que hayas terminado empuja tus cambios al repositorio y los revisaré.
+Gracias,
+Paula Davis
+Jefa de equipo en Web Code
 
 
 ****************************
@@ -19,10 +22,13 @@ Con tus habilidades confiamos en que puedas conseguirlo.
 ****************************
 
 Hello again,
-For our next presentation Amazing Events has asked to see the filters on the site working. They require the search bar to filter events by name and the possibility to search events by their category.
-The filters must be incorporated in the Home, Past Events and Future Events pages.
-Additionally, they require that the event details page can also be used for this presentation.
-With your skills we trust that you can achieve it.
+You have done an excellent job with the presentations, now it’s time to integrate your web app to the database, and complete the stats page.
+Here’s the link to the API
+https://mindhub-xj03.onrender.com/api/amazing
+Once you are done push your changes to the repository and I’ll check them.
+Thanks,
+Paula Davis
+Team Leader at Web Code
 
 
 
@@ -36,31 +42,39 @@ With your skills we trust that you can achieve it.
 
 Paso a paso
 
-Aquí encontrarás los pasos para completar tu tercer sprint.
-Tenga en cuenta los comentarios que recibió en su sprint anterior.
 
-Para este Sprint necesitarás el contenido proporcionado en estos talleres:
-_Funciones de alto orden y métodos de matriz
-_Eventos
-_Parámetros de búsqueda de URL
+Aquí encontrarás los pasos para completar tu cuarto sprint.
+Ten en cuenta el feedback que recibiste en tu sprint anterior.
 
-3er sprint
+Para este Sprint necesitarás el contenido impartido en estos talleres:
+_Asincronismo (especialmente fetch)
 
-◾Tendrás que crear las casillas de verificación de categorías con JS.
+4º Sprint
 
-◾Filtrarás los eventos mostrados según la casilla seleccionada y por lo que está escrito en el ingreso de texto (por categoría y nombre respectivamente).
+◾Crear un nuevo archivo js para la página de estadísticas.
 
-◾Ambos filtros deben funcionar individualmente y combinados.
+◾Tendrás que borrar el archivo data.js de tu proyecto y tomar la información de la API dada con fetch()
 
-◾Ambos filtros deben estar en las páginas Inicio, Eventos pasados ​​y Eventos próximos.
+◾Rellenarás las tablas de las estadísticas con lo siguiente:
 
-◾Recuerda que debes mostrar un mensaje si no hay coincidencias para la búsqueda del usuario.
+1ª Tabla
+-Evento con mayor porcentaje de asistencia
+-Evento con menor porcentaje de asistencia
+-Evento con mayor capacidad
 
-◾Elimine los console.logs innecesarios antes de enviar su tarea
+Para las dos primeras tendrás que usar eventos pasados (ya que estamos hablando de asistencia)
 
-◾ Una vez que haya terminado con su trabajo, agregue, confirme y envíe su proyecto a la rama (sprint3).
+2ª Tabla
+Ingresos y porcentaje de asistencia estimado por categoría (próximos eventos)
 
-◾Envía tu sprint dejando el enlace a tu repositorio de GitHub
+3ª Tabla
+Ingresos y porcentaje de asistencia por categoría (eventos pasados)
+
+◾Una vez que hayas terminado con tu trabajo añade, confirma y empuja tu proyecto a la rama (sprint4)
+
+◾Sube tu sprint dejando el enlace a tu repositorio de GitHub.
+
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 
 
 
@@ -74,28 +88,34 @@ _Parámetros de búsqueda de URL
 
 Step by Step
 
-You’ll find here the steps to complete your third sprint.
+
+You’ll find here the steps to complete your fourth sprint.
 Take into consideration the feedback you received in your previous sprint.
 
 For this Sprint you’ll need the content given in these workshops:
-_High Ordered Functions & Array methods
-_Events
-_URL Search Params
+_Asynchronism (specially fetch)
 
-3rd Sprint
+4th Sprint
 
-◾You’ll need to create the category checkboxes with JS.
+◾Create a new js file for the stats page
 
-◾You’ll filter the events shown according to the selected checkbox and by what is written in the text input (by category and name respectively).
+◾You’ll have to delete the data.js file from your project and take the information from the given API with fetch()
 
-◾Both filters should work individually and combined.
+◾You’ll fill the tables in stats with the following:
 
-◾Both filters must be in the Home, Past Events and Upcoming Events pages.
+1st Table
+-Event with highest percentage of assistance
+-Event with the lowest percentage of assistance
+-Event with the highest capacity
 
-◾Remember you must show a message if there are no matches for the user's search.
+For the first two you’ll have to use past events (as we are talking about assistance)
 
-◾Remove the unnecessary console.logs before submitting your task
+2nd Table
+Revenues and percentage of estimated assistance by category (upcoming events)
 
-◾Once you’re done with your work add, commit and push your project to the branch (sprint3).
+3rd Table
+Revenues and percentage of assistance by category (past events)
 
-◾Submit your sprint leaving the link to your GitHub repository
+◾Once you’re done with your work add, commit and push your project to the branch (sprint4)
+
+◾Submit your sprint leaving the link to your GitHub repository.
