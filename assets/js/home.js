@@ -1,12 +1,34 @@
 // console.log("home probando probando...")
 
-const contenedorTarjetas = document.getElementById("contenedorEventos")
+const contenedorTarjetas = document.getElementById("contenedorEventos");
 
 let buscador = document.querySelector('input[name=busqueda]');
 
-mostrarAllEvents(data.events, contenedorEventos)
+// mostrarAllEvents(data.events, contenedorEventos)
 
-mostrarAllCheckbox(data.events, contenedorFiltro)
+// mostrarAllCheckbox(data.events, contenedorFiltro)
+let data = {};
+
+async function getEventsData() {
+    try {
+        const respuesta = await fetch(apiURL);
+        data = await respuesta.json();
+        eventos = data.events;
+
+        mostrarAllEvents(eventos, contenedorTarjetas);
+        mostrarAllCheckbox(eventos, contenedorFiltro);
+        //hacerLista(eventos);
+        console.log(data);
+        console.log(eventos);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+getEventsData();
+
+
+
 
 // mostrarEventoFiltrado(categoriaSeleccionada, contenedorFiltro)
 //a la funcion mostrarAllEvents() le pasamos dos parametros
@@ -35,25 +57,25 @@ function mostrarAllEvents(arrayData, ubicacion) {
 //=========================FILTRO CHECKBOX===============================vvv
 
 let categoryForm = document.querySelector('#contenedorFiltro');
-let dataFiltrada = [];
+// let dataFiltrada = [];
 
 //let categoriasCheckeadas; //inicializacion
 
 categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se produjeron cambios en input
-    categoriasCheckeadas = []; //asignacion de valores
+    //categoriasCheckeadas = []; //asignacion de valores
 
     if (e.target.classList.contains('form-check-input')) { //condicion q verifica si el elemento en el q se produjo el evento (input) tiene la clase "form-check-input"
 
         filtrarYMostrar(data.events);
     }
-})
+});
 
 
 //====================COMBINACION DE FILTRO Y BUSCADOR ===============================
 
 buscador.addEventListener('input', () => {
     filtrarYMostrar(data.events);
-})
+});
 
 
 function filtrarYMostrar(array) {
@@ -63,17 +85,16 @@ function filtrarYMostrar(array) {
     // console.log(dataFiltrada.name);
 
     //=========Filtro checkbox========
-    let categoriasCheckeadas = [];
-
     const checkboxes = document.querySelectorAll('.form-check-input:checked'); //cada vez q un input cambia de estado a "checked" se almacena en la variable "checkboxes"
     // console.log(checkboxes);
+    let categoriasCheckeadas = Array.from(checkboxes).map(checkbox => checkbox.value);
 
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
-            categoriasCheckeadas.push(checkbox.value)
-        }
+    // checkboxes.forEach(checkbox => {
+    //     if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
+    //         categoriasCheckeadas.push(checkbox.value)
+    //     }
         // console.log(categoriasCheckeadas);
-    });
+    // });
 
     //verifico que el array de categoriasCheckeadas sea superor a 0 porque esto quiere decir que existe al menos un elemento dentro.
     //luego almaceno dentro de dataFiltrada cada evento que se encuentra dentro de la data.events y que haya sido checkeada (o sea marcada)
