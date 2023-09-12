@@ -182,9 +182,14 @@ th {
     color: aliceblue;
 }
 
-tr.eventos {
+tr.eventos th{
     background-color: greenyellow;
+    color: darkblue;
+}
 
+tr.sub td{
+    background-color: yellow;
+    color: darkblue;
 }
 
 /* td:hover{
