@@ -1,7 +1,7 @@
 const contenedorTarjetas = document.getElementById("contenedorEventos");
 let buscador = document.querySelector('input[name=busqueda]');
-let data = {};
-let eventosFuturos = [];
+// let data = {};
+// let eventosFuturos = [];
 
 async function getUpcomingEventsData() {
     try {
@@ -24,23 +24,24 @@ getUpcomingEventsData();
 
 function mostrarUpcomingEvents(arrayData, ubicacion) {
     let tarjetas = "";
-    let error = document.getElementById("error");
-    let currentDate = new Date(data.currentDate);
+    let errorTarjeta = document.getElementById("error");
+    // let currentDate = new Date(data.currentDate);
     // console.log("=========" + data.currentDate + "===========");
 
     if (arrayData.length > 0) {
+        errorTarjeta.innerHTML = "";
         for (objeto of arrayData) {
-            let eventDate = new Date(objeto.date);
-            if (eventDate > currentDate) {
-                // console.log(eventDate);
-                tarjetas += createCard(objeto);
-            }
+            // let eventDate = new Date(objeto.date);
+            tarjetas += createCard(objeto);
+            // if (eventDate > currentDate) {
+            //     // console.log(eventDate);
+            // }
             ubicacion.innerHTML = tarjetas;
-            error.innerHTML = "";
         }
     } else {
         console.log("Error: No se encontraron resultados");
-        error.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;
+        tarjetas = "";
+        errorTarjeta.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;
     }
 }
 
@@ -58,19 +59,18 @@ categoryForm.addEventListener('change', (e) => { //evento que "escucha" si se pr
 
     if (e.target.classList.contains('form-check-input')) { //condicion q verifica si el elemento en el q se produjo el evento (input) tiene la clase "form-check-input"
 
-        filtrarYMostrar(data.events);
+        filtrarYMostrar(eventosFuturos);
     }
 })
 
 //====================COMBINACION DE FILTRO Y BUSCADOR ===============================
 
 buscador.addEventListener('input', () => {
-    filtrarYMostrar(data.events);
+    filtrarYMostrar(eventosFuturos);
 });
 
 function filtrarYMostrar(array) {
     //=========Buscador========
-
     let busqueda = buscador.value;
     let dataFiltrada = array.filter(evento => evento.name.toLowerCase().includes(busqueda.toLowerCase()));
 
@@ -81,6 +81,6 @@ function filtrarYMostrar(array) {
     if (categoriasCheckeadas.length > 0) {
         dataFiltrada = dataFiltrada.filter(evento => categoriasCheckeadas.includes(evento.category))
     }
-
+    console.log(dataFiltrada);
     mostrarUpcomingEvents(dataFiltrada, contenedorEventos);
 }

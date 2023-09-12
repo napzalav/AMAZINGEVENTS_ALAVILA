@@ -1,6 +1,7 @@
 let apiURL = 'https://mindhub-xj03.onrender.com/api/amazing';
 // let data = {};
 let eventos = [];
+console.log(eventos);;
 
 async function getEventsData() {
     try {
@@ -20,13 +21,13 @@ async function getEventsData() {
 getEventsData();
 
 
-function hacerLista(eventos) {
-    let html = "";
-    eventos.forEach(evento => {
-        html += createCard(evento);
-    });
-    document.querySelector('#contenedorEventos').innerHTML = html;
-}
+// function hacerLista(eventos) {
+//     let html = "";
+//     eventos.forEach(evento => {
+//         html += createCard(evento);
+//     });
+//     document.querySelector('#contenedorEventos').innerHTML = html;
+// }
 
 
 
