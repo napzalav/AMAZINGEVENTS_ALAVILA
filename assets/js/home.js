@@ -49,7 +49,7 @@ function mostrarAllEvents(arrayData, ubicacion) {
     } else {
         console.log("Error: No se encontraron resultados");
         error.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;
-        // ubicacion.innerHTML = "";
+        ubicacion.innerHTML = "";
     }
 }
 
@@ -89,13 +89,6 @@ function filtrarYMostrar(array) {
     // console.log(checkboxes);
     let categoriasCheckeadas = Array.from(checkboxes).map(checkbox => checkbox.value);
 
-    // checkboxes.forEach(checkbox => {
-    //     if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
-    //         categoriasCheckeadas.push(checkbox.value)
-    //     }
-        // console.log(categoriasCheckeadas);
-    // });
-
     //verifico que el array de categoriasCheckeadas sea superor a 0 porque esto quiere decir que existe al menos un elemento dentro.
     //luego almaceno dentro de dataFiltrada cada evento que se encuentra dentro de la data.events y que haya sido checkeada (o sea marcada)
     if (categoriasCheckeadas.length > 0) {
@@ -104,3 +97,11 @@ function filtrarYMostrar(array) {
 
     mostrarAllEvents(dataFiltrada, contenedorEventos)
 }
+
+
+// checkboxes.forEach(checkbox => {
+//     if (checkbox.checked && !categoriasCheckeadas.includes(checkbox.value)) {
+//         categoriasCheckeadas.push(checkbox.value)
+//     }
+// console.log(categoriasCheckeadas);
+// });

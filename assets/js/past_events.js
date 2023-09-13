@@ -27,24 +27,20 @@ getPastEventsData();
 
 function mostrarPastEvents(arrayData, ubicacion) {
     let tarjetas = "";
-    let errorTarjeta = document.getElementById("error");
+    let error = document.getElementById("error");
     // let currentDate = new Date(data.currentDate);
     // console.log("=========" + currentDate + "===========");
 
     if (arrayData.length > 0) {
-        errorTarjeta.innerHTML = "";
         for (objeto of arrayData) {
-            // let eventDate = new Date(objeto.date);
             tarjetas += createCard(objeto);
-            // if (eventDate < currentDate) {
-            //     // console.log(eventDate);
-            // }
-            ubicacion.innerHTML = tarjetas;
         }
+        ubicacion.innerHTML = tarjetas;
+        error.innerHTML = "";
     } else {
         console.log("Error: No se encontraron resultados");
-        tarjetas = "";
-        errorTarjeta.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;
+        error.innerHTML = `<p><i><b>No se encontraron resultados...</b></i></p>`;
+        ubicacion.innerHTML = "";
     }
 }
 
