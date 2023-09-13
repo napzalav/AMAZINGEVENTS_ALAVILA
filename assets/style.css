@@ -183,6 +183,7 @@ th {
 }
 
 tr.eventos th{
+    text-align: center;
     background-color: greenyellow;
     color: darkblue;
 }
